@@ -112,7 +112,7 @@ function getMonth(num) {
             return "December"
             break
         default:
-            return "What are you on??"
+            return "Please provide a number from 0-11."
     }
 
 }
