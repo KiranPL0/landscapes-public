@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+    <!--Stylesheets-->
+    <link href="css/index.css" rel="stylesheet">
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Metadata-->
+    <title>Landscapes</title>
+    <!--Opengraph-->
+    <!-- HTML Meta Tags -->
+    <title>Landscapes - Version 2</title>
+    <meta name="description"
+        content="Landscapes is a nice website which lets you have a background, new tab page or anything else!">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://landscapes.kiranpl.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Landscapes - Version 2">
+    <meta property="og:description"
+        content="Landscapes is a nice website which lets you have a background, new tab page or anything else!">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="landscapes.kiranpl.com">
+    <meta property="twitter:url" content="https://landscapes.kiranpl.com/">
+    <meta name="twitter:title" content="Landscapes - Version 2">
+    <meta name="twitter:description"
+        content="Landscapes is a nice website which lets you have a background, new tab page or anything else!">
+    <meta name="twitter:image" content="">
+
+    <!--Add Later-->
+</head>
+
+<body id="body" onload="load()">
+    <div id="banner" class="hidden banner">
+        <p class="bannertexta">Hello! You're right now on the new landscapes, if you would like to go back to the old
+            landscapes click <a class="ql" href="https://archive.kiranpl.com/landscapes/pages/index.html">here.</a> <a
+                class="bannertextb" href="javascript:void(0);" onclick="closeBanner()"><span
+                    class="material-icons">close</span></a></p>
+    </div>
+    <!--Preferences/Settings-->
+    <div class="prefwrap">
+        <button class="pref" onclick="changeImg()">Change background</button>
+        <button class="pref" onclick="changeColour()">Change colour scheme</button>
+        <button class="pref" onclick="timeFormat()">Change time format</button>
+        <button class="pref" onclick="weatherToggle()">Toggle weather addon</button>
+        <button class="pref" onclick="weatherPrefs()">Weather Preferences</button>
+        <button id="togglefs" class="pref" onclick="handlefs()">Enter Fullscreen</button>
+        <button class="pref" onclick="exportData()">Export Data</button>
+        <button class="pref" onclick="importData()">Import Data</button>
+        <button class="pref2" onclick="hidemenu()">Press h to hide this menu.</button>
+    </div>
+
+    <!--Time & Date-->
+    <div id="wrapper"
+        title="Timezone Unknown. Does your browser support Intl.DateTimeFormat().resolvedOptions().timeZone?"
+        class="wrapper">
+        <span class="colourable" id="time">Please enable javascript.</span>
+        <br>
+        <span class="colourable" id="date"></span>
+        <br>
+        <span class="hidden colourable" id="weather">😥 Something went wrong</span>
+    </div>
+
+</body>
+
+</html>
